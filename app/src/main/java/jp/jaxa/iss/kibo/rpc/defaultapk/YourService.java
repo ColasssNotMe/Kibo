@@ -16,12 +16,15 @@ public class YourService extends KiboRpcService {
         api.startMission();
         Point point = new Point(0, 0, 0);
         api.moveTo(point,null, false);
+
+        //log the image
         Mat image = api.getMatNavCam();
             if(image==null){
                 api.flashlightControlFront(80);
             }else{
                 api.flashlightControlFront(10);
                 api.getMatNavCam();
+                api.saveMatImage(image, "image.jpg");
             }
 
 
