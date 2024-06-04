@@ -37,6 +37,7 @@ public class YourService extends KiboRpcService {
         api.getMatNavCam();
         api.saveMatImage(image, "tempImage.png");
 
+        //load images
         String tempImage = Environment.getExternalStorageDirectory().getAbsolutePath() + "/tempImage.png";
         String hammerImage = Environment.getExternalStorageDirectory().getAbsolutePath() + "/hammer.png";
         String kaptonTape = Environment.getExternalStorageDirectory().getAbsolutePath() + "/kapton_tape.png";
